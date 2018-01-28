@@ -1,0 +1,9 @@
+body {
+    margin-bottom: 50px;
+}
+.footer {
+    /*position: fixed;*/
+    bottom: 0;
+    height: 50px;
+    background-color: rgba(6,6,6,0.85);
+}
