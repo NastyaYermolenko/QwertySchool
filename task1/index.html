@@ -9,10 +9,11 @@
 </head>
 <body>
 <div class="container">
-    <div class="row ">
+    <div class="row">
+
         <nav class="navbar navbar-expand-lg navbar-light bg-light col-sm-12 border border-info">
             <a class="navbar-brand" href="#">
-                <img src="img/logo.png" width="30" height="30" alt="">
+                <img src="img/logo.png" width="30" height="30" alt="logo">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navContent"
                     aria-controls="navContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -54,52 +55,89 @@
             </div>
         </nav>
 
+
     </div>
     <br>
     <div class="row">
+
+
         <div class="col-md-3 bg-light d-sm-none d-md-block">
-            <ul class="nav flex-column">
-                <li class="nav-item">
-                    <a class="nav-link active" href="#">Active</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="#">Disabled</a>
-                </li>
-            </ul>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#sidebar"
+                    aria-controls="sidebar" aria-expanded="true">
+                Tap here!
+            </button>
+
+            <div id="sidebar" class="collapse">
+
+                <div class="settings">
+                    <br>
+                    <label for="user_fontsize">Enter font size:</label>
+                    <input type="number" id="user_fontsize" min="8" max="24" value="16">
+                    <label for="user_background">Enter background color:</label>
+                    <input type="color" id="user_background">
+                    <label for="user_fontfamily">Select list:</label>
+                    <select class="form-control" id="user_fontfamily">
+                        <option id="Arial">Arial</option>
+                        <option id="Verdana">Verdana</option>
+                        <option id="TimesNewRoman">Times New Roman</option>
+                        <option id="Monaco">Monaco</option>
+                    </select>
+                    <button type="button" class="block" id="deleteP">Delete paragraph</button>
+
+                </div>
+            </div>
         </div>
 
-        <div class="col-md-9 col-sm-12">
-            <h1  class="text-right">Title!</h1>
-            <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Lectus proin nibh nisl condimentum id venenatis a. Morbi quis commodo odio aenean
+        <div class="col-md-9 col-sm-12 content">
+
+            <h1 class="text-right">Title!</h1>
+            <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et
+                dolore magna aliqua. Lectus proin nibh nisl condimentum id venenatis a. Morbi quis commodo odio
+                aenean
                 sed. Semper eget duis at tellus at. Tincidunt nunc pulvinar sapien et ligula ullamcorper malesuada
-                proin. Neque sodales ut etiam sit amet. Odio ut enim blandit volutpat maecenas volutpat blandit aliquam
-                etiam. Amet porttitor eget dolor morbi non arcu risus quis. Est ultricies integer quis auctor elit sed
+                proin. Neque sodales ut etiam sit amet. Odio ut enim blandit volutpat maecenas volutpat blandit
+                aliquam
+                etiam. Amet porttitor eget dolor morbi non arcu risus quis. Est ultricies integer quis auctor elit
+                sed
                 vulputate mi sit. Volutpat diam ut venenatis tellus. Nisi lacus sed viverra tellus in hac. Non odio
                 euismod lacinia at quis risus.</p>
 
-            <p class="text-justify">Pretium vulputate sapien nec sagittis aliquam malesuada bibendum arcu. Pulvinar sapien et ligula
-                ullamcorper malesuada proin. In eu mi bibendum neque egestas congue. Enim lobortis scelerisque fermentum
-                dui faucibus. Augue interdum velit euismod in pellentesque massa placerat duis. Dignissim suspendisse in
-                est ante in nibh. Commodo quis imperdiet massa tincidunt nunc. Suspendisse in est ante in nibh mauris.
+            <p class="text-justify">Pretium vulputate sapien nec sagittis aliquam malesuada bibendum arcu. Pulvinar
+                sapien et ligula
+                ullamcorper malesuada proin. In eu mi bibendum neque egestas congue. Enim lobortis scelerisque
+                fermentum
+                dui faucibus. Augue interdum velit euismod in pellentesque massa placerat duis. Dignissim
+                suspendisse in
+                est ante in nibh. Commodo quis imperdiet massa tincidunt nunc. Suspendisse in est ante in nibh
+                mauris.
                 Cursus turpis massa tincidunt dui ut ornare lectus sit amet. Augue lacus viverra vitae congue.</p>
-            <p class="text-justify">Pretium vulputate sapien nec sagittis aliquam malesuada bibendum arcu. Pulvinar sapien et ligula
-                ullamcorper malesuada proin. In eu mi bibendum neque egestas congue. Enim lobortis scelerisque fermentum
-                dui faucibus. Augue interdum velit euismod in pellentesque massa placerat duis. Dignissim suspendisse in
-                est ante in nibh. Commodo quis imperdiet massa tincidunt nunc. Suspendisse in est ante in nibh mauris.
+            <p class="text-justify">Pretium vulputate sapien nec sagittis aliquam malesuada bibendum arcu. Pulvinar
+                sapien et ligula
+                ullamcorper malesuada proin. In eu mi bibendum neque egestas congue. Enim lobortis scelerisque
+                fermentum
+                dui faucibus. Augue interdum velit euismod in pellentesque massa placerat duis. Dignissim
+                suspendisse in
+                est ante in nibh. Commodo quis imperdiet massa tincidunt nunc. Suspendisse in est ante in nibh
+                mauris.
                 Cursus turpis massa tincidunt dui ut ornare lectus sit amet. Augue lacus viverra vitae congue.</p>
+            <p class="text-justify">Pretium vulputate sapien nec sagittis aliquam malesuada bibendum arcu. Pulvinar
+                sapien et ligula
+                ullamcorper malesuada proin. In eu mi bibendum neque egestas congue. Enim lobortis scelerisque
+                fermentum
+                dui faucibus. Augue interdum velit euismod in pellentesque massa placerat duis. Dignissim
+                suspendisse in
+                est ante in nibh. Commodo quis imperdiet massa tincidunt nunc. Suspendisse in est ante in nibh
+                mauris.
+                Cursus turpis massa tincidunt dui ut ornare lectus sit amet. Augue lacus viverra vitae congue.</p>
+
         </div>
     </div>
 </div>
 
 <div class=" container">
-    <div class="row fixed-bottom">
+    <div class="row">
         <div class="footer col-sm-12">
             <div class="">
                 <p class="text-muted text-center">This is so cool footer here!</p>
@@ -113,5 +151,6 @@
 <script src="../bower_components/jquery/dist/jquery.min.js"></script>
 <script src="../bower_components/popper.js/dist/popper.min.js"></script>
 <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>
