@@ -1,9 +1,10 @@
-<!doctype html>
+<!Doctype html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
     <link href="css/style.css" rel="stylesheet" type="text/css">
     <title>Week 1</title>
 </head>
@@ -35,61 +36,137 @@
                         <a class="nav-link" href="#">Link</a>
                     </li>
                 </ul>
-                <form class="col-sm-6">
-                    <div class="form-row align-items-center">
-                        <div class="col-sm-3">
-                            <label class="sr-only" for="login">Login</label>
-                            <input type="text" class="form-control" id="login" placeholder="login">
-                        </div>
-                        <div class="col-sm-3">
-                            <label class="sr-only" for="password">Password</label>
-                            <div class="input-group">
-                                <input type="password" class="form-control" id="password" placeholder="password">
+                <div class="col-sm-6">
+                    <div class="form-row align-items-center" id="sign_buttons">
+                        <div class="col-sm-12 nav justify-content-end">
+                            <div class="btn-group mr-2" role="group">
+                                <button class="btn btn-primary" id="SignUpButton"
+                                        data-toggle="modal" data-target="#register_form">Sign up
+                                </button>
+                            </div>
+
+                            <div class="btn-group mr-2" role="group">
+                                <button class="btn btn-primary" id='SignInButton'
+                                        data-toggle="modal" data-target="#auth_form">Sign in
+                                </button>
                             </div>
                         </div>
-                        <div class="col-sm-3">
-                            <button type="submit" class="btn btn-primary">Submit</button>
-                        </div>
                     </div>
-                </form>
+                    <div class="col-sm-12 nav justify-content-end" id='greeting_for_user'>
+                        <h2></h2>
+                        <button class="btn btn-primary" id="SignOutButton">Sign Out</button>
+                    </div>
+                </div>
+
             </div>
         </nav>
 
-
     </div>
+
+    <div id="register_form" class="modal fade" role="dialog">
+        <div class="modal-dialog col-sm-12 col-md-8 col-lg-4">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Please fill in this form to create an account.</h5>
+                    <hr>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group row">
+                        <label for="username" class="col-sm-3 col-form-label"><b>Your name</b></label>
+                        <input type="text" placeholder="Enter your name" id="username" class="col-sm-9 form-control"
+                               required>
+                    </div>
+                    <div class="form-group row">
+                        <label for="register_login" class="col-sm-3 col-form-label"><b>Email</b></label>
+                        <input type="text" placeholder="Enter Email" id="register_login" class="col-sm-9 form-control"
+                               required>
+                    </div>
+                    <div class="form-group row">
+                        <label for="register_password" class="col-sm-3 col-form-label"><b>Password</b></label>
+                        <input type="password" placeholder="Enter Password" id="register_password"
+                               class="col-sm-9 form-control" required>
+                    </div>
+                    <div class="form-group row">
+                        <label for="register_confirmation" class="col-sm-3 col-form-label"><b>Repeat</b></label>
+                        <input type="password" placeholder="Repeat Password" id="register_confirmation"
+                               class="col-sm-9 form-control" required>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary" id="register" data-dismiss="modal">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="auth_form" class="modal fade" role="dialog">
+        <div class="modal-dialog col-sm-12 col-md-8 col-lg-4">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Please enter your e-mail and password.</h5>
+                    <hr>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group row">
+                        <label for="auth_login" class="col-sm-3 col-form-label"><b>Email</b></label>
+                        <input type="text" placeholder="Enter Email" id="auth_login" class="col-sm-9 form-control"
+                               required>
+                    </div>
+                    <div class="form-group row">
+                        <label for="auth_password" class="col-sm-3 col-form-label"><b>Password</b></label>
+                        <input type="password" placeholder="Enter Password" id="auth_password"
+                               class="col-sm-9 form-control" required>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary" id="auth" data-dismiss="modal">Sign In</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <br>
     <div class="row">
 
 
-        <div class="col-md-3 bg-light d-sm-none d-md-block">
+        <div class="col-md-3 bg-light" id="sidebar">
+            <div>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#sidebar_settings"
+                        aria-controls="sidebar_settings" aria-expanded="true">
+                    Tap here!
+                </button>
 
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#sidebar"
-                    aria-controls="sidebar" aria-expanded="true">
-                Tap here!
-            </button>
+                <div id="sidebar_settings" class="collapse">
 
-            <div id="sidebar" class="collapse">
+                    <form class="settings">
+                        <br>
+                        <div class="form-group">
+                            <label for="user_fontsize">Enter font size:</label>
+                            <input type="number" id="user_fontsize" min="8" max="24" value="16">
+                        </div>
+                        <div class="form-group">
+                            <label for="user_background">Enter background color:</label>
+                            <input type="color" id="user_background">
+                        </div>
+                        <div class="form-group">
+                            <label for="user_fontfamily">Select list:</label>
+                            <select class="form-control" id="user_fontfamily">
+                                <option id="Arial">Arial</option>
+                                <option id="Verdana">Verdana</option>
+                                <option id="TimesNewRoman">Times New Roman</option>
+                                <option id="Monaco">Monaco</option>
+                            </select>
+                        </div>
 
-                <div class="settings">
-                    <br>
-                    <label for="user_fontsize">Enter font size:</label>
-                    <input type="number" id="user_fontsize" min="8" max="24" value="16">
-                    <label for="user_background">Enter background color:</label>
-                    <input type="color" id="user_background">
-                    <label for="user_fontfamily">Select list:</label>
-                    <select class="form-control" id="user_fontfamily">
-                        <option id="Arial">Arial</option>
-                        <option id="Verdana">Verdana</option>
-                        <option id="TimesNewRoman">Times New Roman</option>
-                        <option id="Monaco">Monaco</option>
-                    </select>
-                    <button type="button" class="block" id="deleteP">Delete paragraph</button>
+                        <button type="button" class="block" id="deleteP">Delete paragraph</button>
 
+                    </form>
                 </div>
             </div>
         </div>
-
-        <div class="col-md-9 col-sm-12 content">
+        <div class="col-md col-sm-12 content">
 
             <h1 class="text-right">Title!</h1>
             <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
@@ -133,9 +210,9 @@
                 Cursus turpis massa tincidunt dui ut ornare lectus sit amet. Augue lacus viverra vitae congue.</p>
 
         </div>
+
     </div>
 </div>
-
 <div class=" container">
     <div class="row">
         <div class="footer col-sm-12">
@@ -149,8 +226,13 @@
 </div>
 
 <script src="../bower_components/jquery/dist/jquery.min.js"></script>
-<script src="../bower_components/popper.js/dist/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
 <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/4.9.1/firebase.js"></script>
+
 <script src="js/script.js"></script>
 </body>
 </html>
