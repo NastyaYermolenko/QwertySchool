@@ -1,0 +1,17 @@
+.footer {
+  /*position: fixed;*/
+  bottom: 0;
+  height: 50px;
+  background-color: rgba(6,6,6,0.85);
+}
+
+#greeting_for_user{
+  display: none;
+}
+button#SignOutButton{
+  margin-left: 15px;
+}
+
+.modal-body .form-group{
+  margin-right: 5px;
+}
